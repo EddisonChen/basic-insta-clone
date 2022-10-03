@@ -1,0 +1,20 @@
+.profile__stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid lightgray;
+
+    .counts {
+        display: flex;
+        flex-direction: column;
+        
+        p {
+            margin: 0;
+            padding: 3px;
+        }
+
+        .stat__description {
+            color: gray;
+        }
+    }
+}

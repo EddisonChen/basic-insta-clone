@@ -1,0 +1,13 @@
+.story__combo {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+
+    .story__icon {
+        width: 20%;
+        height: 20%;
+        padding: 3%;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
+    }
+}
