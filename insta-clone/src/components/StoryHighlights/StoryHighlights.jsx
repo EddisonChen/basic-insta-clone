@@ -1,11 +1,14 @@
 import "./StoryHighlights.scss";
 import storyIcon from "../../data/propic.png"
 
-const StoryHighlights = () => {
+const StoryHighlights = (props) => {
+
+    const {displayInfoStatus} = props
+
     return (
         <div className="story__combo">
             <img className="story__icon" src={storyIcon} alt="story icon"></img>
-            <p>title</p>
+            <p>{displayInfoStatus.story_caption}</p>
         </div>
     )
 }

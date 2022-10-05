@@ -6,7 +6,19 @@ import discoverIcon from "../../data/discover2.png";
 import heartIcon from "../../data/heart.png";
 import profileIcon from "../../data/profile.png"
 
-const NavBar = () => {
+const NavBar = (props) => {
+
+    const {profileSwitch, setProfileSwitch} = props;
+
+    const switchProfiles = () => {
+        if (profileSwitch == "grompy") {
+            setProfileSwitch("grampy")
+        } else {
+            setProfileSwitch("grompy")
+        }
+    }
+
+    console.log(profileSwitch)
 
     return (
         <div className="navbar">
@@ -16,8 +28,7 @@ const NavBar = () => {
             <img className="navbar__item" src={addIcon} alt="add icon"></img>
             <img className="navbar__item" src={discoverIcon} alt="discover icon"></img>
             <img className="navbar__item" src={heartIcon} alt="heart icon"></img>
-            <img className="navbar__item" src={profileIcon} alt="profile icon"></img>
-            
+            <img onClick={switchProfiles} className="navbar__item" src={profileIcon} alt="profile icon"></img> 
         </div>
     )
 }

@@ -4,13 +4,20 @@ import ProfileDescription from "../../components/ProfileDescription/ProfileDescr
 import StoryHighlights from "../../components/StoryHighlights/StoryHighlights";
 import Statistics from "../../components/Statistics/Statistics";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+
+    const {displayInfoStatus} = props
+        
     return (
         <div>
-            <ProfileHeader/>
-            <ProfileDescription/>
-            <StoryHighlights/>
-            <Statistics/>
+            <ProfileHeader
+                displayInfoStatus={displayInfoStatus}/>
+            <ProfileDescription
+                displayInfoStatus={displayInfoStatus}/>
+            <StoryHighlights
+                displayInfoStatus={displayInfoStatus}/>
+            <Statistics
+                displayInfoStatus={displayInfoStatus}/>
         </div>
     )
         
